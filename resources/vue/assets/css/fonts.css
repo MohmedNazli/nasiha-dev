@@ -1,0 +1,15 @@
+@font-face{
+    font-family:neo_sans;
+    src:url('../fonts/neo_sans_medium.ttf');
+    font-weight:500;
+}
+@font-face{
+    font-family:neo_sans;
+    src:url('../fonts/neo_sans.ttf');
+    font-weight: 400;
+}
+@font-face{
+    font-family:neo_sans;
+    src:url('../fonts/neo_sans_bold.ttf');
+    font-weight: 700;
+}
