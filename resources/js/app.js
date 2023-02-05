@@ -1,5 +1,7 @@
-import {createApp} from 'vue'
-import App from "../Vue/App.vue";
-import router from "../Vue/router";
+import './bootstrap';
 
-createApp(App).use(router).mount("#app")
+import Alpine from 'alpinejs';
+
+window.Alpine = Alpine;
+
+Alpine.start();
