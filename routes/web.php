@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/admin', function () {
+Route::get('/admin', static function () {
     return view('welcome');
 });
 
-Route::get('/{any}', function () {
+Route::get('/{any}', static function () {
     return view('frontend.app');
 })->where("any",".*");
 
