@@ -22,14 +22,9 @@ Route::get('/dashboard', function () {
     return view('admin.dashboard.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/dashboard/users/tenants', function () {
-    return view('admin.dashboard.users.tenants');
-})->middleware(['auth', 'verified'])->name('dashboard.users.tenants');
-
-Route::get('/dashboard/users/customers', function () {
-    return view('admin.dashboard.users.customers');
-})->middleware(['auth', 'verified'])->name('dashboard.users.customers');
-
+Route::get('/dashboard/companies', function () {
+    return view('admin.dashboard.companies');
+})->middleware(['auth', 'verified'])->name('companies');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
