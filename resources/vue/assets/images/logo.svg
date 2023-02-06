@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="81" viewBox="0 0 120 81">
-  <g id="Group_2515" data-name="Group 2515" transform="translate(-128 -374.732)">
-    <g id="Group_2042" data-name="Group 2042" transform="translate(0 259.732)">
-      <text id="COMPANY" transform="translate(188 190)" fill="#57be80" font-size="24" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-59.789" y="0">COMPANY</tspan></text>
-    </g>
-    <path id="layers" d="M3.307,21.771,26.7,35.223a2.609,2.609,0,0,0,2.6,0L52.684,21.771a2.581,2.581,0,0,0,0-4.476L29.295,3.843a2.609,2.609,0,0,0-2.6,0L3.307,17.3a2.581,2.581,0,0,0,0,4.476ZM28,9.068,46.187,19.417,28,29.894,9.8,19.52Zm22.09,20.153L28,41.924l-22.09-12.7a2.605,2.605,0,0,0-3.56.931A2.581,2.581,0,0,0,3.307,33.7L26.7,47.149a2.609,2.609,0,0,0,2.6,0L52.684,33.7a2.588,2.588,0,1,0-2.6-4.476Z" transform="translate(160.005 371.236)" fill="#57be80"/>
-  </g>
-</svg>
