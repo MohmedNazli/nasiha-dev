@@ -28,34 +28,35 @@
       <div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500" id="#kt_aside_menu" data-kt-menu="true">
 
         @include('layouts.admin.menu-item', ['link' => route('dashboard'),'icon' => 'fa fa-home','name' => 'لوحة التحكم'])
+        @include('layouts.admin.menu-item', ['link' => route('companies'),'icon' => 'fa fa-users','name' => 'الشركات'])
 
-        <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-          <span class="menu-link">
-            <span class="menu-icon">
-              <i class="fas fa-users"></i>
-            </span>
-            <span class="menu-title">المستخدمين</span>
-            <span class="menu-arrow"></span>
-          </span>
-          <div class="menu-sub menu-sub-accordion">
-            <div class="menu-item">
-              <a class="menu-link" href="{{ route('dashboard.users.tenants') }}">
-                <span class="menu-bullet">
-                  <span class="bullet bullet-dot"></span>
-                </span>
-                <span class="menu-title"> أصحاب المتاجر </span>
-              </a>
-            </div>
-            <div class="menu-item">
-              <a class="menu-link" href="{{ route('dashboard.users.customers') }}">
-                <span class="menu-bullet">
-                  <span class="bullet bullet-dot"></span>
-                </span>
-                <span class="menu-title"> عملاء المتاجر </span>
-              </a>
-            </div>
-          </div>
-        </div>
+{{--        <div data-kt-menu-trigger="click" class="menu-item menu-accordion">--}}
+{{--          <span class="menu-link">--}}
+{{--            <span class="menu-icon">--}}
+{{--              <i class="fas fa-users"></i>--}}
+{{--            </span>--}}
+{{--            <span class="menu-title">المستخدمين</span>--}}
+{{--            <span class="menu-arrow"></span>--}}
+{{--          </span>--}}
+{{--          <div class="menu-sub menu-sub-accordion">--}}
+{{--            <div class="menu-item">--}}
+{{--              <a class="menu-link" href="{{ route('dashboard.users.tenants') }}">--}}
+{{--                <span class="menu-bullet">--}}
+{{--                  <span class="bullet bullet-dot"></span>--}}
+{{--                </span>--}}
+{{--                <span class="menu-title"> أصحاب المتاجر </span>--}}
+{{--              </a>--}}
+{{--            </div>--}}
+{{--            <div class="menu-item">--}}
+{{--              <a class="menu-link" href="{{ route('dashboard.users.customers') }}">--}}
+{{--                <span class="menu-bullet">--}}
+{{--                  <span class="bullet bullet-dot"></span>--}}
+{{--                </span>--}}
+{{--                <span class="menu-title"> عملاء المتاجر </span>--}}
+{{--              </a>--}}
+{{--            </div>--}}
+{{--          </div>--}}
+{{--        </div>--}}
 
 {{--        @include('layouts.admin.menu-item', ['link' => route('admin.settings'),'icon' => 'fa fa-cog','name' => __('main.settings')])--}}
 {{--        @include('layouts.admin.menu-item', ['link' => route('admin.goals.index'),'icon' => 'fas fa-bullseye','name' => __('main.goals')])--}}
