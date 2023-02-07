@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
+use Spatie\Permission\Models\Role;
 
 class AdminSeeder extends Seeder
 {
@@ -21,6 +22,6 @@ class AdminSeeder extends Seeder
                 'remember_token' => Str::random(10),
                 'address' => 'Riyadh, Saudi Arabia',
             ]
-        );
+        )->assignRole(Role::create(['name' => 'Super-Admin']));
     }
 }
