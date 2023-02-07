@@ -10,7 +10,7 @@
             <div class="d-flex flex-center flex-column flex-column-fluid p-10 p-lg-15">
                 <!--begin::Logo-->
                 <a href="/" class="mb-12">
-                    <img alt="Logo" src="{{ asset('imgs/logo.png') }}" class="h-100px" />
+                    <img alt="Logo" src="{{ asset('images/logo.png') }}" class="h-100px" />
                 </a>
                 <!--end::Logo-->
                 <!--begin::Wrapper-->

@@ -27,6 +27,9 @@ class AuthenticatedSessionController extends Controller
     {
         $request->authenticate();
 
+        if (!$request->user()->hasRole('admin') && !$request->user()->hasRole('company')) {
+            $this->destroy($request);
+        }
         $request->session()->regenerate();
 
         return redirect()->intended(RouteServiceProvider::HOME);
