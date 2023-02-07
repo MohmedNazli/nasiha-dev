@@ -17,7 +17,7 @@ class AdminSeeder extends Seeder
                 'email' => 'admin@nasiha.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt('admin@nasiha.com'),
-                'avatar' => 'imgs/logo.png',
+                'avatar' => 'images/logo.png',
                 'remember_token' => Str::random(10),
                 'address' => 'Riyadh, Saudi Arabia',
             ]

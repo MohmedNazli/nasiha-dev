@@ -17,7 +17,7 @@ class DemoUsersSeeder extends Seeder
                 'email' => 'company@nasiha.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt('company@nasiha.com'),
-                'avatar' => 'imgs/logo.png',
+                'avatar' => 'images/logo.png',
                 'remember_token' => Str::random(10),
                 'address' => 'Riyadh, Saudi Arabia',
             ]
@@ -30,7 +30,7 @@ class DemoUsersSeeder extends Seeder
                 'email' => 'user@nasiha.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt('user@nasiha.com'),
-                'avatar' => 'imgs/logo.png',
+                'avatar' => 'images/logo.png',
                 'remember_token' => Str::random(10),
                 'address' => 'Riyadh, Saudi Arabia',
             ]
