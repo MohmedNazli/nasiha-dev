@@ -26,45 +26,10 @@
     <div class="hover-scroll-overlay-y my-5 my-lg-5" id="kt_aside_menu_wrapper" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_aside_logo, #kt_aside_footer" data-kt-scroll-wrappers="#kt_aside_menu" data-kt-scroll-offset="0">
       <!--begin::Menu-->
       <div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500" id="#kt_aside_menu" data-kt-menu="true">
-
         @include('layouts.admin.menu-item', ['link' => route('dashboard'),'icon' => 'fa fa-home','name' => 'لوحة التحكم'])
-        @include('layouts.admin.menu-item', ['link' => route('companies'),'icon' => 'fa fa-users','name' => 'الشركات'])
-
-{{--        <div data-kt-menu-trigger="click" class="menu-item menu-accordion">--}}
-{{--          <span class="menu-link">--}}
-{{--            <span class="menu-icon">--}}
-{{--              <i class="fas fa-users"></i>--}}
-{{--            </span>--}}
-{{--            <span class="menu-title">المستخدمين</span>--}}
-{{--            <span class="menu-arrow"></span>--}}
-{{--          </span>--}}
-{{--          <div class="menu-sub menu-sub-accordion">--}}
-{{--            <div class="menu-item">--}}
-{{--              <a class="menu-link" href="{{ route('dashboard.users.tenants') }}">--}}
-{{--                <span class="menu-bullet">--}}
-{{--                  <span class="bullet bullet-dot"></span>--}}
-{{--                </span>--}}
-{{--                <span class="menu-title"> أصحاب المتاجر </span>--}}
-{{--              </a>--}}
-{{--            </div>--}}
-{{--            <div class="menu-item">--}}
-{{--              <a class="menu-link" href="{{ route('dashboard.users.customers') }}">--}}
-{{--                <span class="menu-bullet">--}}
-{{--                  <span class="bullet bullet-dot"></span>--}}
-{{--                </span>--}}
-{{--                <span class="menu-title"> عملاء المتاجر </span>--}}
-{{--              </a>--}}
-{{--            </div>--}}
-{{--          </div>--}}
-{{--        </div>--}}
-
-{{--        @include('layouts.admin.menu-item', ['link' => route('admin.settings'),'icon' => 'fa fa-cog','name' => __('main.settings')])--}}
-{{--        @include('layouts.admin.menu-item', ['link' => route('admin.goals.index'),'icon' => 'fas fa-bullseye','name' => __('main.goals')])--}}
-{{--        @include('layouts.admin.menu-item', ['link' => route('admin.works.index'),'icon' => 'fas fa-images','name' => __('main.works')])--}}
-{{--        @include('layouts.admin.menu-item', ['link' => route('admin.services.index'),'icon' => 'fas fa-cogs','name' => __('main.services')])--}}
-{{--        @include('layouts.admin.menu-item', ['link' => route('admin.projects.index'),'icon' => 'fas fa-project-diagram','name' => __('main.projects')])--}}
-{{--        @include('layouts.admin.menu-item', ['link' => route('admin.orders.index'),'icon' => 'fas fa-list','name' => __('main.orders')])--}}
-
+        @can('companies section')
+          @include('layouts.admin.menu-item', ['link' => route('companies'),'icon' => 'fa fa-users','name' => 'الشركات'])
+        @endcan
       </div>
       <!--end::Menu-->
     </div>
