@@ -1,7 +1,8 @@
 @extends('layouts.admin.app')
 
 @section('content')
-    <div class="content d-flex flex-column flex-column-fluid">
+    @can('companies section')
+        <div class="content d-flex flex-column flex-column-fluid">
         <!--begin::Toolbar-->
         @include('admin.dashboard.breadcrumb')
         <!--end::Toolbar-->
@@ -69,4 +70,5 @@
         </div>
         <!--end::Post-->
     </div>
+    @endcan
 @endsection
