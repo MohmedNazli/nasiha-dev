@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,17 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', static function () {
     return redirect('login');
 });
-
-Route::get('/dashboard', function () {
-    return view('admin.dashboard.index');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::get('/dashboard/companies', function () {
-    return view('admin.dashboard.companies');
-})->middleware(['auth', 'verified'])->name('companies');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -33,3 +26,10 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::prefix('admin/dashboard')->middleware(['auth', 'role:admin|company', 'verified'])->group(static function () {
+    Route::get('/', [AdminController::class, 'index'])->name('dashboard');
+    Route::middleware('role:admin')->group(static function () {
+        Route::get('/companies', [AdminController::class, 'companies'])->name('companies');
+    });
+});
