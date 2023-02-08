@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Admin;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
@@ -10,7 +11,7 @@ class AdminSeeder extends Seeder
 {
     public function run(): void
     {
-        $user = User::query()->updateOrCreate(
+        User::query()->updateOrCreate(
             [
                 'name' => 'Nasiha Admin',
                 'user_type' => User::ADMIN_USER,
@@ -22,7 +23,8 @@ class AdminSeeder extends Seeder
                 'address' => 'Riyadh, Saudi Arabia',
             ]
         );
-        $user->assignRole('super-admin');
-        $user->assignRole(User::ADMIN_USER);
+
+        Admin::factory()
+            ->create();
     }
 }
