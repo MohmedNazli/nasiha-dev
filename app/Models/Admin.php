@@ -10,6 +10,6 @@ class Admin extends Authenticatable
 {
     use HasFactory, SoftDeletes;
 
-    protected $guard = "admin";
+    protected string $guard = 'admin';
 
 }
