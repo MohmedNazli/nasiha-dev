@@ -1,9 +1,9 @@
 <?php
 
 
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
-use App\Http\Controllers\Panel\Admin\LoginController;
+use App\Http\Controllers\Panel\Admin\AdminController;
+use App\Http\Controllers\Panel\Admin\CompanyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,8 +23,7 @@ Route::prefix('dashboard/admin/')->group(static function () {
 
     Route::middleware(['auth:admin', 'verified'])->group(static function () {
         Route::get('/', [AdminController::class, 'index'])->name('dashboard');
-        Route::get('/companies', [AdminController::class, 'companies'])->name('companies');
-        Route::post('/companies/store', [AdminController::class, 'storeCompany'])->name('companies.store');
+        Route::resource('companies', CompanyController::class);
     });
 });
 
