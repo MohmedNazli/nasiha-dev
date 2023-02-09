@@ -21,14 +21,10 @@ Route::prefix('dashboard/admin/')->group(static function () {
     Route::get('login', [AuthenticatedSessionController::class, 'create'])
         ->name('admin.login');
 
-    Route::post('login/store', [LoginController::class, 'login'])->name('login.store');
-    Route::get('/', [AdminController::class, 'index'])->name('dashboard');
-
-    Route::middleware(['auth', 'role:admin|company', 'verified'])->group(static function () {
-        Route::middleware('role:admin')->group(static function () {
-            Route::get('/companies', [AdminController::class, 'companies'])->name('companies');
-            Route::post('/companies/store', [AdminController::class, 'storeCompany'])->name('companies.store');
-        });
+    Route::middleware(['auth:admin', 'verified'])->group(static function () {
+        Route::get('/', [AdminController::class, 'index'])->name('dashboard');
+        Route::get('/companies', [AdminController::class, 'companies'])->name('companies');
+        Route::post('/companies/store', [AdminController::class, 'storeCompany'])->name('companies.store');
     });
 });
 
