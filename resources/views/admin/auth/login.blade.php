@@ -33,6 +33,7 @@
                             <!--begin::Input-->
                             <input class="form-control form-control-lg form-control-solid" dir="ltr" type="text" name="email" autocomplete="on" value="{{ old('email')}}" required autofocus/>
                             <!--end::Input-->
+                            <x-input-error :messages="$errors->get('email')" class="mt-2" />
                         </div>
                         <!--end::Input group-->
                         <!--begin::Input group-->
@@ -48,6 +49,7 @@
                             <!--begin::Input-->
                             <input class="form-control form-control-lg form-control-solid" dir="ltr" type="password" name="password" autocomplete="on" required/>
                             <!--end::Input-->
+                            <x-input-error :messages="$errors->get('password')" class="mt-2" />
                         </div>
                         <!--end::Input group-->
 
