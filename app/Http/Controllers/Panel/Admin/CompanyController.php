@@ -30,7 +30,7 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        //
+        return back();
     }
 
     /**
@@ -71,7 +71,7 @@ class CompanyController extends Controller
      */
     public function show($id)
     {
-        //
+        return back();
     }
 
     /**
@@ -82,7 +82,7 @@ class CompanyController extends Controller
      */
     public function edit($id)
     {
-        //
+        return back();
     }
 
     /**
@@ -94,7 +94,7 @@ class CompanyController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return back();
     }
 
     /**
