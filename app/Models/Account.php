@@ -12,4 +12,6 @@ class Account extends Model
 
     protected $guard = "account";
 
+    protected $guarded = [];
+
 }

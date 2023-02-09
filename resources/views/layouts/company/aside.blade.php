@@ -39,6 +39,7 @@
             <div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500"
                  id="#kt_aside_menu" data-kt-menu="true">
                 @include('layouts.company.menu-item', ['link' => route('company.dashboard'),'icon' => 'fa fa-home','name' => 'لوحة التحكم'])
+                @include('layouts.company.menu-item', ['link' => route('employees.index'),'icon' => 'fa fa-users','name' => 'الموظفين'])
             </div>
             <!--end::Menu-->
         </div>
