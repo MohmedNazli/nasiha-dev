@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', static function () {
-    return redirect('login');
+    return redirect(route('admin.login'));
 });
 
 Route::middleware('auth')->group(function () {
@@ -27,10 +27,3 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::prefix('admin/dashboard')->middleware(['auth', 'role:admin|company', 'verified'])->group(static function () {
-    Route::get('/', [AdminController::class, 'index'])->name('dashboard');
-    Route::middleware('role:admin')->group(static function () {
-        Route::get('/companies', [AdminController::class, 'companies'])->name('companies');
-        Route::post('/companies/store', [AdminController::class, 'storeCompany'])->name('companies.store');
-    });
-});
