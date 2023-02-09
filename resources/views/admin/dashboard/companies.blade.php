@@ -34,7 +34,7 @@
                                 <!--end::Item-->
                                 <!--begin::Item-->
                                 <li class="breadcrumb-item text-muted">
-                                    <a href="{{route('companies')}}"
+                                    <a href="{{route('companies.index')}}"
                                        class="text-muted text-hover-primary">الشركات</a>
                                 </li>
                                 <!--end::Item-->
@@ -430,6 +430,19 @@
                                                                 <!--end::Input-->
                                                             </div>
                                                             <!--end::Input group-->
+
+                                                            <!--begin::Input group-->
+                                                            <div class="fv-row mb-7">
+                                                                <!--begin::Label-->
+                                                                <label class="required fw-semibold fs-6 mb-2">User Name</label>
+                                                                <!--end::Label-->
+                                                                <!--begin::Input-->
+                                                                <input type="text" name="user_name"
+                                                                       class="form-control form-control-solid mb-3 mb-lg-0"
+                                                                       placeholder="User Name" value="mohanned_anwar"/>
+                                                                <!--end::Input-->
+                                                            </div>
+                                                            <!--end::Input group-->
                                                             <!--begin::Input group-->
                                                             <div class="fv-row mb-7">
                                                                 <!--begin::Label-->
@@ -525,7 +538,7 @@
                                                 <div class="symbol symbol-circle symbol-50px overflow-hidden me-3">
                                                     <a href="#">
                                                         <div class="symbol-label">
-                                                            <img src="{{asset($company->avatar)}}"
+                                                            <img src="{{asset($company->image)}}"
                                                                  alt="Emma Smith"
                                                                  class="w-100"/>
                                                         </div>
@@ -542,7 +555,7 @@
                                             </td>
                                             <!--end::User=-->
                                             <!--begin::Role=-->
-                                            <td>{{ $company->getRoleNames()->first()}}</td>
+                                            <td>{{ 'admin' }}</td>
                                             <!--end::Role=-->
                                             <!--begin::Joined-->
                                             <td>{{$company->created_at}}</td>
