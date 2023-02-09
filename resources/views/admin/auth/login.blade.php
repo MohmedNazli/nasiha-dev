@@ -2,7 +2,7 @@
 
 @section('main')
     <!--begin::Main-->
-    <form class="pad-hor" method="POST" role="form" action="{{ route('login') }}">
+    <form class="pad-hor" method="POST" role="form" action="{{ route('admin.login.store') }}">
         <div class="d-flex flex-column flex-root">
         <!--begin::Authentication - Sign-in -->
         <div class="d-flex flex-column flex-column-fluid bgi-position-y-bottom position-x-center bgi-no-repeat bgi-size-contain bgi-attachment-fixed">

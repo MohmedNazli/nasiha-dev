@@ -2,6 +2,7 @@
 
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\Panel\Admin\AdminAuthController;
 use App\Http\Controllers\Panel\Admin\AdminController;
 use App\Http\Controllers\Panel\Admin\CompanyController;
 use Illuminate\Support\Facades\Route;
@@ -18,12 +19,16 @@ use Illuminate\Support\Facades\Route;
  */
 
 Route::prefix('dashboard/admin/')->group(static function () {
-    Route::get('login', [AuthenticatedSessionController::class, 'create'])
+    Route::get('login', [AdminAuthController::class, 'create'])
         ->name('admin.login');
+    Route::post('login', [AdminAuthController::class, 'store'])->name('admin.login.store');
+
 
     Route::middleware(['auth:admin', 'verified'])->group(static function () {
         Route::get('/', [AdminController::class, 'index'])->name('dashboard');
         Route::resource('companies', CompanyController::class);
+        Route::post('logout', [AdminAuthController::class, 'destroy'])
+            ->name('admin.logout');
     });
 });
 

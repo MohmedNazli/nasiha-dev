@@ -117,7 +117,7 @@
         <!--begin::Menu item-->
         <div class="menu-item px-5">
           <a class="menu-link px-5" onclick="document.getElementById('logout').submit()" >
-            <form method="POST" action="{{ route('logout') }}">
+            <form method="POST" action="{{ route('admin.logout') }}">
               @csrf
               <x-dropdown-link :href="route('logout')"
                                onclick="event.preventDefault();
