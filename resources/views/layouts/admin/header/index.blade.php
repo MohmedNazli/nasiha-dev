@@ -18,7 +18,7 @@
     <!--begin::Mobile logo-->
     <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
       <a href="/admin" class="d-lg-none">
-        <img alt="Logo" src="{{asset(auth()->user()->avatar ?? 'images/avatar.jpeg')}}" class="h-30px" />
+        <img alt="Logo" src="{{asset(auth()->user()->image ?? 'images/avatar.jpeg')}}" class="h-30px" />
       </a>
     </div>
     <!--end::Mobile logo-->
