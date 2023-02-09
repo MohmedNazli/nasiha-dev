@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Admin;
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 class AdminSeeder extends Seeder
@@ -17,7 +18,7 @@ class AdminSeeder extends Seeder
                 'user_type' => User::ADMIN_USER,
                 'email' => 'admin@nasiha.com',
                 'email_verified_at' => now(),
-                'password' => bcrypt('admin@nasiha.com'),
+                'password' => Hash::make('admin@nasiha.com'),
                 'avatar' => 'images/logo.png',
                 'remember_token' => Str::random(10),
                 'address' => 'Riyadh, Saudi Arabia',
@@ -27,11 +28,11 @@ class AdminSeeder extends Seeder
         Admin::query()->updateOrCreate(
             [
                 'name' => 'Nasiha Admin',
-                'email' => 'admin@nasiha.com',
-                'password' => bcrypt('admin@nasiha.com'),
+                'email' => 'admin2@nasiha.com',
+                'password' => Hash::make('admin2@nasiha.com'),
                 'image' => 'images/logo.png',
                 'isActive' => true,
             ]
-        )->assignRole('admin');
+        );
     }
 }
