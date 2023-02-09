@@ -22,7 +22,7 @@ class AdminSeeder extends Seeder
                 'remember_token' => Str::random(10),
                 'address' => 'Riyadh, Saudi Arabia',
             ]
-        );
+        )->assignRole('admin');
 
         Admin::factory()
             ->create();

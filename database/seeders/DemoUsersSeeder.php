@@ -12,7 +12,7 @@ class DemoUsersSeeder extends Seeder
     {
         User::query()->updateOrCreate(
             [
-                'name' => 'Nasiha Staff',
+                'name' => 'Nasiha Company',
                 'user_type' => User::COMPANY_USER,
                 'email' => 'company@nasiha.com',
                 'email_verified_at' => now(),

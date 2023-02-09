@@ -12,6 +12,9 @@ class DatabaseSeeder extends Seeder
             PermissionsSeeder::class,
             AdminSeeder::class,
             DemoUsersSeeder::class,
+            CompanySeeder::class,
+            AccountSeeder::class,
+            MessageSeeder::class,
         ]);
     }
 }
