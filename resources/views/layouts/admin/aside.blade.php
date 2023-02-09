@@ -39,7 +39,7 @@
             <div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500"
                  id="#kt_aside_menu" data-kt-menu="true">
                 @include('layouts.admin.menu-item', ['link' => route('dashboard'),'icon' => 'fa fa-home','name' => 'لوحة التحكم'])
-                @include('layouts.admin.menu-item', ['link' => route('companies'),'icon' => 'fa fa-users','name' => 'الشركات'])
+                @include('layouts.admin.menu-item', ['link' => route('companies.index'),'icon' => 'fa fa-users','name' => 'الشركات'])
             </div>
             <!--end::Menu-->
         </div>
