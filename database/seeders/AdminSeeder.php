@@ -12,24 +12,11 @@ class AdminSeeder extends Seeder
 {
     public function run(): void
     {
-        User::query()->updateOrCreate(
-            [
-                'name' => 'Nasiha Admin',
-                'user_type' => User::ADMIN_USER,
-                'email' => 'admin@nasiha.com',
-                'email_verified_at' => now(),
-                'password' => Hash::make('admin@nasiha.com'),
-                'avatar' => 'images/logo.png',
-                'remember_token' => Str::random(10),
-                'address' => 'Riyadh, Saudi Arabia',
-            ]
-        )->assignRole('admin');
-
         Admin::query()->updateOrCreate(
             [
                 'name' => 'Nasiha Admin',
-                'email' => 'admin2@nasiha.com',
-                'password' => Hash::make('admin2@nasiha.com'),
+                'email' => 'admin@nasiha.com',
+                'password' => Hash::make('admin@nasiha.com'),
                 'image' => 'images/logo.png',
                 'isActive' => true,
             ]
