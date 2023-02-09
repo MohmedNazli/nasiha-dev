@@ -44,6 +44,7 @@ class CompanyController extends Controller
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.Company::class],
+            'user_name' => ['required', 'string', 'max:255', 'unique:'.Company::class],
             'password' => ['required'],
         ]);
 
