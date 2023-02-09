@@ -31,5 +31,6 @@ Route::prefix('admin/dashboard')->middleware(['auth', 'role:admin|company', 'ver
     Route::get('/', [AdminController::class, 'index'])->name('dashboard');
     Route::middleware('role:admin')->group(static function () {
         Route::get('/companies', [AdminController::class, 'companies'])->name('companies');
+        Route::post('/companies/store', [AdminController::class, 'storeCompany'])->name('companies.store');
     });
 });

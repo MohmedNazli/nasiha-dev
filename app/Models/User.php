@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Contracts\Database\Query\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -29,6 +30,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'user_type',
+        'avatar',
+        'email_verified_at',
     ];
 
     /**
@@ -58,5 +62,10 @@ class User extends Authenticatable
     public function isCompany(): bool
     {
         return $this->user_type === 'company';
+    }
+
+    public function scopeTypeCustomer(Builder $builder): Builder
+    {
+        return $builder->where('user_type', self::COMPANY_USER);
     }
 }
