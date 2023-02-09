@@ -4,6 +4,7 @@
 
 use App\Http\Controllers\Panel\Company\CompanyAuthController;
 use App\Http\Controllers\Panel\Company\CompanyController;
+use App\Http\Controllers\Panel\Company\EmployeeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,5 +28,6 @@ Route::prefix('dashboard/company/')->group(static function () {
         Route::get('/', [CompanyController::class, 'index'])->name('company.dashboard');
         Route::post('logout', [CompanyAuthController::class, 'destroy'])
             ->name('company.logout');
+        Route::resource('employees', EmployeeController::class);
     });
 });
