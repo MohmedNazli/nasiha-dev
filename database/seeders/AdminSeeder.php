@@ -24,7 +24,14 @@ class AdminSeeder extends Seeder
             ]
         )->assignRole('admin');
 
-        Admin::factory()
-            ->create();
+        Admin::query()->updateOrCreate(
+            [
+                'name' => 'Nasiha Admin',
+                'email' => 'admin@nasiha.com',
+                'password' => bcrypt('admin@nasiha.com'),
+                'image' => 'images/logo.png',
+                'isActive' => true,
+            ]
+        )->assignRole('admin');
     }
 }
