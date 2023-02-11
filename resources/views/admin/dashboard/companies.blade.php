@@ -73,7 +73,7 @@
                                         <!--end::Svg Icon-->
                                         <input type="text" data-kt-user-table-filter="search"
                                                class="form-control form-control-solid w-250px ps-14"
-                                               placeholder="Search user"/>
+                                               placeholder="ابحث عن شركة"/>
                                     </div>
                                     <!--end::Search-->
                                 </div>
@@ -97,7 +97,7 @@
                                                                   fill="currentColor"/>
 														</svg>
 													</span>
-                                            <!--end::Svg Icon-->Add User
+                                            <!--end::Svg Icon-->اضافة شركة جديدة
                                         </button>
                                         <!--end::Add user-->
                                     </div>
@@ -313,10 +313,10 @@
                                                        value="1"/>
                                             </div>
                                         </th>
-                                        <th class="min-w-125px">User</th>
-                                        <th class="min-w-125px">Role</th>
-                                        <th class="min-w-125px">Joined Date</th>
-                                        <th class="text-end min-w-100px">Actions</th>
+                                        <th class="min-w-125px">شركة</th>
+                                        <th class="min-w-125px">الصلاحيات</th>
+                                        <th class="min-w-125px">تاريخ الانضمام</th>
+                                        <th class="text-end min-w-100px">اجراءات</th>
                                     </tr>
                                     <!--end::Table row-->
                                     </thead>
@@ -356,7 +356,7 @@
                                             </td>
                                             <!--end::User=-->
                                             <!--begin::Role=-->
-                                            <td>{{ 'admin' }}</td>
+                                            <td>{{ 'شركة' }}</td>
                                             <!--end::Role=-->
                                             <!--begin::Joined-->
                                             <td>{{$company->created_at}}</td>
@@ -364,7 +364,7 @@
                                             <!--begin::Action=-->
                                             <td class="text-end">
                                                 <a href="#" class="btn btn-light btn-active-light-primary btn-sm"
-                                                   data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+                                                   data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">اجراءات
                                                     <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
                                                     <span class="svg-icon svg-icon-5 m-0">
 																<svg width="24" height="24" viewBox="0 0 24 24"
@@ -380,13 +380,13 @@
                                                     <!--begin::Menu item-->
                                                     <div class="menu-item px-3">
                                                         <a href="#"
-                                                           class="menu-link px-3">Edit</a>
+                                                           class="menu-link px-3">تعديل</a>
                                                     </div>
                                                     <!--end::Menu item-->
                                                     <!--begin::Menu item-->
                                                     <div class="menu-item px-3">
                                                         <a href="#" class="menu-link px-3"
-                                                           data-kt-users-table-filter="delete_row">Delete</a>
+                                                           data-kt-users-table-filter="delete_row">حذف</a>
                                                     </div>
                                                     <!--end::Menu item-->
                                                 </div>
