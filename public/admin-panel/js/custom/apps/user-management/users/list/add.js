@@ -18,28 +18,28 @@ var KTUsersAddUser = function () {
                     'name': {
                         validators: {
                             notEmpty: {
-                                message: 'Name is required'
+                                message: 'الاسم الكامل مطلوب'
                             }
                         }
                     },
                     'user_name': {
                         validators: {
                             notEmpty: {
-                                message: 'User name is required'
+                                message: 'اسم المستخدم مطلوب'
                             }
                         }
                     },
                     'email': {
                         validators: {
                             notEmpty: {
-                                message: 'Valid email address is required'
+                                message: 'البريد الالكتروني مطلوب'
                             }
                         }
                     },
                     'password': {
                         validators: {
                             notEmpty: {
-                                message: 'Password is required'
+                                message: 'كلمة المرور مطلوبة'
                             }
                         }
                     },
