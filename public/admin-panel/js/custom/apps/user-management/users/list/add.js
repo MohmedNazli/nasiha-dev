@@ -154,12 +154,12 @@ var KTUsersAddUser = function () {
             e.preventDefault();
 
             Swal.fire({
-                text: "Are you sure you would like to cancel?",
+                text: "هل أنت متأكد أنك تريد الإلغاء؟",
                 icon: "warning",
                 showCancelButton: true,
                 buttonsStyling: false,
-                confirmButtonText: "Yes, cancel it!",
-                cancelButtonText: "No, return",
+                confirmButtonText: "نعم ، قم بإلغائها!",
+                cancelButtonText: "لا، ارجع",
                 customClass: {
                     confirmButton: "btn btn-primary",
                     cancelButton: "btn btn-active-light"
