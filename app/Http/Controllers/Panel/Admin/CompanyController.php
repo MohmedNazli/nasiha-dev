@@ -49,16 +49,23 @@ class CompanyController extends Controller
         ]);
 
 
-        $user = Company::create([
+        $company = Company::create([
             'name' => $request->name,
             'user_name' => $request->user_name,
             'email' => $request->email,
             'mobile' => $request?->mobile,
             'password' => Hash::make($request->password),
-            'image' => 'images/logo.png',
         ]);
 
-        event(new Registered($user));
+        if ($request->hasFile('avatar')) {
+            $media = $company->addMediaFromRequest('avatar')
+                ->toMediaCollection('avatar');
+
+            $company->image = $media->getUrl();
+            $company->save();
+        }
+
+        event(new Registered($company));
 
         return back();
     }
