@@ -151,7 +151,7 @@
                                                 <div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
                                                     <!--begin::Form-->
                                                     <form id="kt_modal_add_user_form" class="form"
-                                                          action="{{route('companies.store')}}" method="POST">
+                                                          action="{{route('companies.store')}}" method="POST" enctype="multipart/form-data">
                                                         @csrf
                                                         <!--begin::Scroll-->
                                                         <div class="d-flex flex-column scroll-y me-n7 pe-7"
