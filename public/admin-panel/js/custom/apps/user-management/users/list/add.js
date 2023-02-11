@@ -170,10 +170,10 @@ var KTUsersAddUser = function () {
                     modal.hide();	
                 } else if (result.dismiss === 'cancel') {
                     Swal.fire({
-                        text: "Your form has not been cancelled!.",
+                        text: "لم يتم إلغاء النموذج الخاص بك !.",
                         icon: "error",
                         buttonsStyling: false,
-                        confirmButtonText: "Ok, got it!",
+                        confirmButtonText: "حسنًا ، اذهب!",
                         customClass: {
                             confirmButton: "btn btn-primary",
                         }
