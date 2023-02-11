@@ -122,7 +122,7 @@
                                                 <!--begin::Modal header-->
                                                 <div class="modal-header" id="kt_modal_add_user_header">
                                                     <!--begin::Modal title-->
-                                                    <h2 class="fw-bold">Add User</h2>
+                                                    <h2 class="fw-bold">اضافة شركة</h2>
                                                     <!--end::Modal title-->
                                                     <!--begin::Close-->
                                                     <div class="btn btn-icon btn-sm btn-active-icon-primary"
@@ -164,7 +164,7 @@
                                                             <!--begin::Input group-->
                                                             <div class="fv-row mb-7">
                                                                 <!--begin::Label-->
-                                                                <label class="d-block fw-semibold fs-6 mb-5">Avatar</label>
+                                                                <label class="d-block fw-semibold fs-6 mb-5">الصورة الرمزية</label>
                                                                 <!--end::Label-->
                                                                 <!--begin::Image placeholder-->
                                                                 <style>.image-input-placeholder {
@@ -214,8 +214,7 @@
                                                                 </div>
                                                                 <!--end::Image input-->
                                                                 <!--begin::Hint-->
-                                                                <div class="form-text">Allowed file types: png, jpg,
-                                                                    jpeg.
+                                                                <div class="form-text">أنواع الملفات المسموح بها: png، jpg، jpeg.
                                                                 </div>
                                                                 <!--end::Hint-->
                                                             </div>
@@ -223,13 +222,12 @@
                                                             <!--begin::Input group-->
                                                             <div class="fv-row mb-7">
                                                                 <!--begin::Label-->
-                                                                <label class="required fw-semibold fs-6 mb-2">Full
-                                                                    Name</label>
+                                                                <label class="required fw-semibold fs-6 mb-2">الاسم الكامل</label>
                                                                 <!--end::Label-->
                                                                 <!--begin::Input-->
                                                                 <input type="text" name="name"
                                                                        class="form-control form-control-solid mb-3 mb-lg-0"
-                                                                       placeholder="Full name" required/>
+                                                                       placeholder="الاسم الكامل" required/>
                                                                 <!--end::Input-->
                                                             </div>
                                                             <!--end::Input group-->
@@ -237,19 +235,19 @@
                                                             <!--begin::Input group-->
                                                             <div class="fv-row mb-7">
                                                                 <!--begin::Label-->
-                                                                <label class="required fw-semibold fs-6 mb-2">User Name</label>
+                                                                <label class="required fw-semibold fs-6 mb-2">اسم المستخدم</label>
                                                                 <!--end::Label-->
                                                                 <!--begin::Input-->
                                                                 <input type="text" name="user_name"
                                                                        class="form-control form-control-solid mb-3 mb-lg-0"
-                                                                       placeholder="User Name" required/>
+                                                                       placeholder="اسم المستخدم" required/>
                                                                 <!--end::Input-->
                                                             </div>
                                                             <!--end::Input group-->
                                                             <!--begin::Input group-->
                                                             <div class="fv-row mb-7">
                                                                 <!--begin::Label-->
-                                                                <label class="required fw-semibold fs-6 mb-2">Email</label>
+                                                                <label class="required fw-semibold fs-6 mb-2">البريد الالكتروني</label>
                                                                 <!--end::Label-->
                                                                 <!--begin::Input-->
                                                                 <input type="email" name="email"
@@ -262,7 +260,7 @@
                                                             <!--begin::Input group-->
                                                             <div class="fv-row mb-7">
                                                                 <!--begin::Label-->
-                                                                <label class="required fw-semibold fs-6 mb-2">Password</label>
+                                                                <label class="required fw-semibold fs-6 mb-2">كلمة المرور</label>
                                                                 <!--end::Label-->
                                                                 <!--begin::Input-->
                                                                 <input type="password" name="password"
@@ -276,12 +274,12 @@
                                                         <!--begin::Actions-->
                                                         <div class="text-center pt-15">
                                                             <button type="reset" class="btn btn-light me-3"
-                                                                    data-kt-users-modal-action="cancel">Discard
+                                                                    data-kt-users-modal-action="cancel">الغاء
                                                             </button>
                                                             <button type="submit" class="btn btn-primary"
                                                                     data-kt-users-modal-action="submit">
-                                                                <span class="indicator-label">Submit</span>
-                                                                <span class="indicator-progress">Please wait...
+                                                                <span class="indicator-label">اضافة</span>
+                                                                <span class="indicator-progress">الرجاء الانتظار قليلا...
 																			<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                                                             </button>
                                                         </div>
