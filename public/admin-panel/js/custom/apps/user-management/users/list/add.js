@@ -83,10 +83,10 @@ var KTUsersAddUser = function () {
 
                             // Show popup confirmation 
                             Swal.fire({
-                                text: "Form has been successfully submitted!",
+                                text: "تم تقديم النموذج بنجاح!",
                                 icon: "success",
                                 buttonsStyling: false,
-                                confirmButtonText: "Ok, got it!",
+                                confirmButtonText: "حسنًا ، اذهب!",
                                 customClass: {
                                     confirmButton: "btn btn-primary"
                                 }
