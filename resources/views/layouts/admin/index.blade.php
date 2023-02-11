@@ -79,12 +79,7 @@
 		<!--begin::Javascript-->
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-		<!--begin::Global Javascript Bundle(used by all pages)-->
-		<script src="{{ asset('admin-panel/plugins/global/plugins.bundle.js') }}"></script>
-		<script src="{{ asset('admin-panel/js/scripts.bundle.js') }}"></script>
-		<script src="{{ asset('admin-panel/js/app/main.js') }}"></script>
 
-		<!--end::Global Javascript Bundle-->
 
 		@stack('scripts')
 
