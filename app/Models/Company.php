@@ -8,7 +8,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
+/**
+ * @property mixed $id
+ */
 class Company extends Authenticatable implements HasMedia
 {
     use HasFactory, SoftDeletes, InteractsWithMedia;
@@ -23,6 +27,11 @@ class Company extends Authenticatable implements HasMedia
 
         $this->addMediaCollection('avatar')
             ->singleFile();
+    }
+
+    public function imageUrl()
+    {
+        return Media::find($this->id)?->getUrl();
     }
 
 }

@@ -61,7 +61,7 @@ class CompanyController extends Controller
             $media = $company->addMediaFromRequest('avatar')
                 ->toMediaCollection('avatar');
 
-            $company->image = $media->getUrl();
+            $company->image_id = $media->id;
             $company->save();
         }
 

@@ -339,7 +339,7 @@
                                                 <div class="symbol symbol-circle symbol-50px overflow-hidden me-3">
                                                     <a href="#">
                                                         <div class="symbol-label">
-                                                            <img src="{{asset($company->image)}}"
+                                                            <img src="{{asset($company->imageUrl() ?? 'images/avatar.jpeg')}}"
                                                                  alt="Emma Smith"
                                                                  class="w-100"/>
                                                         </div>
@@ -348,7 +348,7 @@
                                                 <!--end::Avatar-->
                                                 <!--begin::User details-->
                                                 <div class="d-flex flex-column">
-                                                    <a href="../../demo1/dist/apps/user-management/users/view.html"
+                                                    <a href="#"
                                                        class="text-gray-800 text-hover-primary mb-1">{{$company->name}}</a>
                                                     <span>{{$company->email}}</span>
                                                 </div>
