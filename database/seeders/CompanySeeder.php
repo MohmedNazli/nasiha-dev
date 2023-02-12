@@ -16,7 +16,6 @@ class CompanySeeder extends Seeder
                 'user_name' => 'nasiha_company',
                 'email' => 'company@nasiha.com',
                 'password' => Hash::make('company@nasiha.com'),
-                'image' => 'images/logo.png',
                 'isActive' => true,
                 'settings' => '["color","red"]',
             ]
