@@ -14,7 +14,7 @@ return new class extends Migration {
             $table->string('email')->unique()->nullable();
             $table->string('mobile', 20)->nullable();
             $table->string('password');
-            $table->string('image', 256)->nullable();
+            $table->integer('image_id')->nullable();
             $table->json('settings')->nullable();
             $table->boolean('isActive')->default(1);
             $table->softDeletes();
